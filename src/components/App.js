@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const apifun = async () => {
       setLoader(true);
-      fetch(`https://jsonplaceholder.typicode.com/photos/${inputValue}`)
+      fetch(`https://jsonplaceholder.typicode.com/photos/${inputValue}`,{method: "GET"})
         .then((data) => {
           return data.json();
         })
